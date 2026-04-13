@@ -4,7 +4,7 @@
 
 A função map em Clojure aplica uma função a cada elemento de uma coleção, retornando uma nova coleção com os resultados.
 
-No arquivo [map.clj](../codes/src/collections/map.clj) é implementado uma função chamada `meu-mapa` para **exemplificar** a funcionalidade da função `map` do clojure:
+No arquivo [map.clj](../../examples/src/collections/map.clj) é implementado uma função chamada `meu-mapa` para **exemplificar** a funcionalidade da função `map` do clojure:
 
 ```clojure
 (defn meu-mapa

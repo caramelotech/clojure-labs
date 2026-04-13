@@ -2,14 +2,55 @@
     <img src='./notes/assets/clojure-logo.png' alt='Clojure Logo' width='100' height='100'>
 </p>
 
-<h1 align='center'>Clojure4Beginners</h1>
+# Clojure Labs
 
-Este repositório é um guia prático para aprender Clojure, abordando desde conceitos básicos até tópicos avançados de programação funcional, tendo como objetivo fornecer materiais didáticos e exercícios práticos.
+Base de conhecimento sobre **Clojure** da Caramelo Tech, com foco em programação funcional para iniciantes.
 
-## Aprenda sobre
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
 
-- [Introdução ao Clojure](./notes/1-introducao/README.md)
-- [Coleções](./notes/2-colecoes/README.md)
+## O que você vai encontrar
+
+- Anotações sobre fundamentos de Clojure e programação funcional
+- Exemplos práticos em um projeto Leiningen
+- Exercícios hands-on para fixação de conceitos
+- Mini projetos aplicados
+
+## Conteúdo
+
+| Tópico                      | Descrição                                        | Link                                                 |
+| --------------------------- | ------------------------------------------------ | ---------------------------------------------------- |
+| Introdução ao Clojure       | Configuração, sintaxe, threading e boas práticas | [notes/1-introducao](./notes/1-introducao/README.md) |
+| Coleções                    | Vetores, mapas, reduce, ordenação, lazy vs eager | [notes/2-colecoes](./notes/2-colecoes/README.md)     |
+| Refs, Átomos e Concorrência | PersistentQueue, threads, atoms, swap!           | [notes/3-refs](./notes/3-refs/README.md)             |
+| Testes                      | clojure.test, deftest, boundary tests            | [notes/x-tests](./notes/x-tests/README.md)           |
+| Exemplos de código          | Projeto Leiningen com exemplos por tópico        | [examples/](./examples/)                             |
+
+## Estrutura do repositório
+
+```
+clojure-labs/
+├── notes/        # Anotações e estudos
+├── examples/     # Índice dos exemplos
+├── exercicios/   # Exercícios propostos
+├── projetos/     # Projetos práticos
+└── examples/     # Projeto Leiningen com exemplos executáveis
+```
+
+## Como usar
+
+1. Comece pelas anotações em `/notes`
+2. Explore os exemplos no projeto `/codes` via REPL
+3. Resolva os exercícios em `/exercicios`
+4. Construa os projetos em `/projetos`
+
+## Contribuição
+
+Contribuições são bem-vindas! Veja o [Guia de Contribuição](.github/CONTRIBUTING.md) para detalhes.
+
+## Licença
+
+MIT
 
 ## Contribuidores
 
