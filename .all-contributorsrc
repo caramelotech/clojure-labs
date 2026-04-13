@@ -1,9 +1,7 @@
 {
   "projectName": "clojure4beginners",
   "projectOwner": "RubberDucksBr",
-  "files": [
-    "README.md"
-  ],
+  "files": ["README.md"],
   "commitType": "docs",
   "commitConvention": "angular",
   "contributorsPerLine": 7,
@@ -13,24 +11,14 @@
       "name": "Daniele Araújo",
       "avatar_url": "https://avatars.githubusercontent.com/u/37555137?v=4",
       "profile": "http://felurye.com.br",
-      "contributions": [
-        "code",
-        "content",
-        "example",
-        "ideas"
-      ]
+      "contributions": ["code", "content", "example", "ideas"]
     },
     {
       "login": "SamGomes52",
       "name": "Samantha Kellen",
       "avatar_url": "https://avatars.githubusercontent.com/u/42253793?v=4",
       "profile": "https://www.linkedin.com/in/samantha-kellen/",
-      "contributions": [
-        "code",
-        "content",
-        "example",
-        "ideas"
-      ]
+      "contributions": ["code", "content", "example", "ideas"]
     }
   ]
 }

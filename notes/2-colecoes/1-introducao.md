@@ -4,8 +4,6 @@
 
 Em Clojure, **coleções** são estruturas de dados fundamentais para armazenar e manipular conjuntos de valores. Elas seguem os princípios da **imutabilidade** (não podem ser modificadas diretamente) e são projetadas para uso em programação funcional. Clojure oferece várias coleções prontas, com implementações eficientes e uma interface uniforme.
 
----
-
 ## Tipos de Coleções em Clojure
 
 1. **Listas** (`list` ou `'()`)
@@ -17,8 +15,6 @@ Essas coleções compartilham características comuns:
 
 - **Persistência:** Elas não são alteradas diretamente, mas retornam versões modificadas.
 - **Interface uniforme:** Podem ser usadas com funções como `map`, `filter`, `reduce`, etc.
-
----
 
 ### 1. Listas
 
@@ -40,8 +36,6 @@ Essas coleções compartilham características comuns:
 (cons 0 '(1 2 3)) ; => (0 1 2 3)
 ```
 
----
-
 ### 2. Vetores
 
 - São coleções indexadas, como arrays, mas imutáveis.
@@ -62,8 +56,6 @@ Essas coleções compartilham características comuns:
 (assoc [1 2 3] 1 10) ; => [1 10 3] (modifica um índice)
 ```
 
----
-
 ### 3. Conjuntos
 
 - Coleções de elementos únicos, sem ordem definida.
@@ -83,8 +75,6 @@ Essas coleções compartilham características comuns:
 (conj #{1 2 3} 4)      ; => #{1 2 3 4}
 (disj #{1 2 3} 2)      ; => #{1 3}
 ```
-
----
 
 ### 4. Mapas
 
@@ -107,8 +97,6 @@ Essas coleções compartilham características comuns:
 (dissoc {:a 1 :b 2} :b)     ; => {:a 1}
 ```
 
----
-
 ## Comparação entre Coleções
 
 | **Tipo**     | **Uso principal**             | **Vantagens**                                  |
@@ -117,8 +105,6 @@ Essas coleções compartilham características comuns:
 | **Vetor**    | Dados indexados               | Acesso rápido por índice.                      |
 | **Conjunto** | Dados únicos                  | Garantia de unicidade.                         |
 | **Mapa**     | Associação chave-valor        | Lookup eficiente por chave.                    |
-
----
 
 ## Exemplo Prático com Coleções
 
@@ -142,8 +128,6 @@ Essas coleções compartilham características comuns:
 (set (map :idade usuarios))
 ;; => #{25 30 35}
 ```
-
----
 
 ## Transformações com `map`, `filter`, e `reduce`
 

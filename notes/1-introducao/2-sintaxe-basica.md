@@ -69,8 +69,6 @@ Para acessar a documentação:
 (doc quadrado)
 ```
 
----
-
 ## Exemplo Completo: Função para Calcular Média
 
 Aqui está um exemplo de uma função pura que calcula a média de uma lista de números:
@@ -88,8 +86,6 @@ Aqui está um exemplo de uma função pura que calcula a média de uma lista de 
 - **`reduce`**: Soma todos os elementos da lista.
 - **`count`**: Conta o número de elementos.
 - **`/`**: Divide a soma pela quantidade para calcular a média.
-
----
 
 ## Programação Funcional em Clojure
 
