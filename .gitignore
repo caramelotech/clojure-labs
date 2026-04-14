@@ -1,3 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro
+.astro/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
 # Leiningen / Clojure
 pom.xml
 pom.xml.asc
@@ -16,10 +40,8 @@ target/
 
 # Clojure CLI
 .clojure/
-.cpcache/
 
 # Editor - IntelliJ / Cursive
-.idea/
 *.iml
 
 # Editor - VS Code / Calva
@@ -29,5 +51,11 @@ target/
 .clj-kondo/
 .lsp/
 
-# Mercurial (não aplicável a este repositório)
+# Mercurial
 .hgignore
+
+# Claude Code
+.claude/
+
+# Shell crash dumps
+bash.exe.stackdump
