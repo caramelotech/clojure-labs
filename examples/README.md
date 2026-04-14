@@ -1,34 +1,33 @@
-# 💻 Exemplos
+# Exemplos
 
-## Estrutura do projeto examples/
+Esta pasta concentra o material pratico do repositorio.
 
-```
-examples/src/
-├── codes/           # Exemplos organizados por tópico
-│   ├── conditions.clj
-│   ├── functions.clj
-│   ├── lambda.clj
-│   ├── map_filter_reduce.clj
-│   ├── maps_vals_and_keys.clj
-│   ├── symbols_and_namespace.clj
-│   ├── vectors.clj
-│   └── vectors_get_and_update.clj
-└── collections/     # Exemplos de coleções avançadas
-    ├── db.clj
-    ├── eazy_eager.clj
-    ├── group_by.clj
-    ├── logic.clj
-    ├── map.clj
-    ├── reduce.clj
-    └── sort_by.clj
+## Estrutura do projeto
+
+```text
+examples/
+├── src/
+│   ├── codes/         -> Exemplos organizados por topico
+│   └── collections/   -> Exemplos de colecoes avancadas
+├── test/              -> Espaco para testes do projeto
+├── project.clj        -> Configuracao do projeto Leiningen
+├── exercises.md       -> Exercicios da trilha
+└── projects.md        -> Projetos praticos
 ```
 
 ## Como executar
 
 ```bash
 cd examples
-lein repl        # Inicia o REPL interativo
-lein run         # Executa o projeto
+lein repl
+lein run
 ```
 
-**[← Voltar ao README Principal](../README.md)**
+## Indice
+
+| Caminho | Tipo | Descricao |
+| --- | --- | --- |
+| `src/codes/` | Exemplos | Namespaces introdutorios sobre sintaxe, funcoes e estruturas basicas |
+| `src/collections/` | Exemplos | Namespaces praticos sobre colecoes, reduce e ordenacao |
+| `exercises.md` | Exercicios | Desafios para praticar os conceitos das notas |
+| `projects.md` | Projetos | Propostas de mini projetos para consolidar o aprendizado |
