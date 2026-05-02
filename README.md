@@ -17,6 +17,16 @@ Base de conhecimento sobre **Clojure** da Caramelo Tech, com foco em programacao
 - Exercicios hands-on para fixacao de conceitos
 - Mini projetos aplicados
 
+## Conteudo
+
+| Topico | Descricao | Link |
+| --- | --- | --- |
+| Introducao ao Clojure | Configuracao, sintaxe, threading e boas praticas | [1-introducao/](src/content/docs/1-introducao/index.md) |
+| Colecoes | Vetores, mapas, reduce, ordenacao, lazy vs eager | [2-colecoes/](src/content/docs/2-colecoes/index.md) |
+| Refs, Atomos e Concorrencia | PersistentQueue, threads, atoms e `swap!` | [3-refs/](src/content/docs/3-refs/index.md) |
+| Testes | `clojure.test`, `deftest` e boundary tests | [x-tests/](src/content/docs/x-tests/index.md) |
+| Exemplos de codigo | Projeto Leiningen com exemplos por topico | [examples/README.md](examples/README.md) |
+
 ## Estrutura do repositorio
 
 ```text
