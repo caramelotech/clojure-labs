@@ -1,6 +1,6 @@
 # Clojure Labs
 
-Base de conhecimento sobre **Clojure** da Caramelo Tech, com foco em programação funcional para iniciantes.
+Base de conhecimento sobre **Clojure** do Caramelo Tech, com foco em programação funcional para iniciantes.
 
 ## O que você vai encontrar
 
