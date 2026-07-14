@@ -1,69 +1,64 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Orientações para agentes de IA que trabalham neste repositório.
 
-## Overview
+## Visão geral
 
-This is an educational repository about Clojure, published as a documentation site using Astro + Starlight. It has two independent parts:
+Repositório de **conteúdo puro** do Clojure Labs (Caramelo Tech). Contém notas em Markdown e um projeto Leiningen de exemplos - não há build de site, dependências Node ou linting.
 
-- `src/content/docs/` - Markdown notes rendered as the Starlight site (in Portuguese)
-- `examples/` - A Leiningen project with hands-on Clojure code organized by topic
+As notas são publicadas no site do Caramelo Labs em `https://caramelotech.com.br/labs/clojure/`. Quem monta e publica o site é o repositório hub [labs](https://github.com/caramelotech/labs): a cada push em `main` que altere `notes/` ou `sidebar.json`, o workflow `.github/workflows/notify-hub.yml` dispara o rebuild do hub via `repository_dispatch`.
 
-## Site (Astro + Starlight)
+## Estrutura
 
-```bash
-npm install
-npm run dev      # http://localhost:4321
-npm run build    # Production build
-npm run preview  # Preview production build
+```
+notes/            # Notas em Markdown puro - cada arquivo vira uma página no site
+  index.md        # Página de entrada do lab no site
+  indice.md       # Índice de todas as anotações
+  1-introducao/   # Ambiente, sintaxe, atalhos, threading, boas práticas
+  2-colecoes/     # Vetores, mapas, reduce, ordenação, lazy vs eager
+  3-refs/         # Filas, threads, átomos e retries
+  x-tests/        # clojure.test
+sidebar.json      # Seções da barra lateral no site (labels e ordem)
+examples/         # Projeto Leiningen com namespaces práticos (não publicado no site)
 ```
 
-The site is deployed to `https://caramelotech.com.br/clojure-labs`. The `base` path in `astro.config.mjs` must stay as `/clojure-labs`.
+## Escrevendo notas
 
-## Examples (Leiningen project)
+As notas NÃO usam frontmatter. Regras:
+
+- **A primeira linha da nota deve ser o título como `# H1`** - no site, ela vira o `title` da página (o hub injeta o frontmatter automaticamente)
+- Use `##` e `###` para as demais seções (apenas um `#` por arquivo, na primeira linha)
+- Prefixo numérico no nome do arquivo controla a ordem na barra lateral dentro da pasta: `1-nome.md`, `2-nome.md`
+- Imagens ficam junto das notas (ex: `notes/secao/assets/img.png`), referenciadas com caminho relativo em sintaxe Markdown: `![descrição](./assets/img.png)` - nunca use tags HTML `<img>` nem caminhos absolutos
+- Links para outras notas do site usam o caminho completo: `/labs/clojure/<secao>/<nota>/`
+- Ao adicionar uma nota, considere atualizá-la em `notes/indice.md`
+- Exemplos de código Clojure incluem a saída esperada em comentários `;;`
+
+### Nova seção de tema
+
+1. Crie a subpasta em `notes/nova-secao/` com as notas
+2. Adicione a seção em `sidebar.json`:
+   ```json
+   { "label": "Título da Seção", "directory": "nova-secao" }
+   ```
+
+## Exemplos (projeto Leiningen)
 
 ```bash
 cd examples
-lein repl    # Start REPL (default ns: codes.core)
+lein repl    # REPL (ns padrão: codes.core)
 lein run
 ```
 
-Namespaces follow the topic structure: `codes.*` for introductory syntax/functions, `collections.*` for advanced collection examples.
+Namespaces seguem a estrutura dos temas: `codes.*` para sintaxe/funções introdutórias, `collections.*` para coleções. Um conceito por namespace.
 
-## Content structure
+## Convenções e preferências
 
-The docs trilha is organized into numbered sections that control sidebar order:
+- Idioma: português brasileiro (pt-BR)
+- Usar hífens (-) em vez de travessões (—) em todos os textos
+- Em Markdown, NÃO usar `---` para separar seções (exceto para notas/atribuições no final do arquivo)
+- **Git:** Nunca fazer `git commit` ou `git push` automaticamente - apenas quando explicitamente solicitado
 
-```
-src/content/docs/
-├── indice.md
-├── 1-introducao/   - Getting started, syntax, IDE shortcuts, threading, best practices
-├── 2-colecoes/     - Collections: intro, reduce, maps, sorting, lazy vs eager
-├── 3-refs/         - Concurrency: queues, threads, atoms, mapv/partial
-└── x-tests/        - Testing with clojure.test
-```
+## Recursos úteis
 
-## Content conventions
-
-- All documentation is written in Portuguese (pt-BR)
-- Each doc file uses Starlight frontmatter (`title`, `description`, `lastUpdated`, `sidebar.order`, `tags`)
-- Do not repeat the `title` as `# h1` - Starlight renders it automatically
-- Use `##` and `###` for sections
-- Clojure code examples include expected output in comments using `;;`
-- One concept per namespace in `examples/src/`
-- Do not use `---` to separate sections in Markdown files
-
-## sidebar.order
-
-**`sidebar.order` é sequencial por diretório**, não global. A ordem entre seções é controlada pelo array `sidebar` em `astro.config.mjs`. Dentro de cada pasta, numere os arquivos a partir de 1.
-
-Para adicionar uma nova seção superior (ex: `nova-categoria/`):
-1. Crie o diretório em `src/content/docs/nova-categoria/`
-2. Adicione um arquivo `index.md` como página de entrada
-3. Adicione uma entrada `autogenerate` em `astro.config.mjs`:
-   ```javascript
-   {
-     label: "Título da Seção",
-     autogenerate: { directory: "nova-categoria" },
-   }
-   ```
+- [labs (hub)](https://github.com/caramelotech/labs) - estrutura do site, script de fetch e deploy
