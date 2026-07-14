@@ -1,0 +1,10 @@
+{
+  "sections": [
+    { "label": "Visão geral", "slug": "." },
+    { "label": "Introdução ao Clojure", "directory": "1-introducao" },
+    { "label": "Coleções", "directory": "2-colecoes" },
+    { "label": "Refs, Átomos e Concorrência", "directory": "3-refs" },
+    { "label": "Testes", "directory": "x-tests" },
+    { "label": "Índice", "slug": "indice" }
+  ]
+}
