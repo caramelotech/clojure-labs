@@ -1,7 +1,6 @@
 (ns codes.maps-vals-and-keys)
 
-
-; :arroz, por exemplo, é um keyword que representa um produto e 10 é o valor associado a ele.
+;; :arroz, por exemplo, é um keyword que representa um produto e 10 é o valor associado a ele.
 (def estoque {:arroz 10 :feijao 20 :macarrao 30 :carne 40})
 
 (println estoque)
@@ -10,95 +9,53 @@
 (println "Temos" (count estoque) "itens em estoque")
 
 (println (assoc estoque :cuscuz 15))
+;; => {:arroz 10, :feijao 20, :macarrao 30, :carne 40, :cuscuz 15}
+
 (println (dissoc estoque :carne))
+;; => {:arroz 10, :feijao 20, :macarrao 30}
 
 (defn tira-um
   [valor]
   (- valor 1))
 
 (println (update estoque :arroz tira-um))
+;; => {:arroz 9, :feijao 20, :macarrao 30, :carne 40}
 
 
-(def pedido {
-             :arroz    {:quantidade 2 :preco 10}
+;; ## Mapas aninhados
+
+(def pedido {:arroz    {:quantidade 2 :preco 10}
              :feijao   {:quantidade 3 :preco 20}
              :macarrao {:quantidade 1 :preco 0}})
 
 (println pedido)
-(println "Arroz" pedido :arroz)
-(println "Quantidade de arroz" (get pedido [:arroz :quantidade]))
+
+(println "Arroz" (get pedido :arroz))
+;; => Arroz {:quantidade 2, :preco 10}
+
+;; `get` só busca uma chave por vez - não existe um "caminho" de chaves:
+(println "Quantidade de arroz via get" (get pedido [:arroz :quantidade]))
+;; => nil, porque [:arroz :quantidade] não é uma chave do mapa, é um vetor
+
+;; Para navegar por chaves aninhadas, use get-in:
+(println "Quantidade de arroz via get-in" (get-in pedido [:arroz :quantidade]))
+;; => 2
+
+;; Atalhos equivalentes para o mesmo caminho:
 (println "Feijão" (:feijao pedido))
-(println "Bolo?" (:bolo pedido))
-(println "Bolo?" (:bolo pedido {}))
-
 (println (:quantidade (:arroz pedido)))
+;; => 2
 
-; Utilizando o get-in
-(println (get-in pedido [:arroz :quantidade]))
+;; Chave que não existe: get-in/keyword devolvem nil (ou o valor padrão informado)
+(println "Bolo?" (:bolo pedido))
+;; => nil
+(println "Bolo?" (:bolo pedido {}))
+;; => {}
 
-; Utilizando threading macro
+;; Usando a threading macro (->) para encadear os mesmos acessos
 (-> pedido
     :arroz
     :quantidade
     inc
     println)
-
-
-; Desestruturação
-(defn imprime-e-15
-  [[chave valor]]
-  (println chave "<e>" valor)
-  15)
-
-(println (map imprime-e-15 pedido))
-
-(defn preco-dos-produtos
-  [[_ valor]]                                               ; Caso não queira usar a chave, pode-se usar o underline
-  (* (:quantidade valor) (:preco valor)))
-
-(println "Preço total do pedido" (reduce + (map preco-dos-produtos pedido)))
-
-
-
-(defn total-do-pedido
-  [pedido]
-  (reduce + (map preco-dos-produtos pedido)))
-
-(println "Preço total do pedido" (total-do-pedido pedido))
-
-
-; Diferente do -> (threading first), o ->> (threading last) passa o resultado da expressão anterior como último argumento da próxima expressão.
-(defn total-do-pedido
-  [pedido]
-  (->> pedido
-       (map preco-dos-produtos,,,)
-       (reduce +,,,)))
-
-(println "Preço total do pedido" (total-do-pedido pedido))
-
-
-(defn gratuito?
-  [item]
-  (<= (get item :preco 0) 0))
-
-(println (filter gratuito? (vals pedido)))
-
-
-
-(defn gratuito?
-  [item]
-  (<= (get item :preco 0) 0))
-
-(println (filter (fn [[chave valor]] (gratuito? valor)) pedido))
-(println (filter #(gratuito? (second %)) pedido))
-
-
-(defn pago?
-  [item]
-  (not (gratuito? item)))
-
-(println (filter pago? (vals pedido)))
-
-; Trabalhando com composição de função
-(def pago? (comp not gratuito?))
-(println (filter pago? (vals pedido)))
+;; => 3
