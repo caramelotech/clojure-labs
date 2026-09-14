@@ -8,7 +8,8 @@ Esta pasta concentra o material pratico do repositorio.
 examples/
 ├── src/
 │   ├── codes/         -> Exemplos organizados por topico
-│   └── collections/   -> Exemplos de colecoes avancadas
+│   ├── collections/   -> Exemplos de colecoes avancadas
+│   └── refs/          -> Exemplos de filas, atomos e concorrencia
 ├── test/              -> Espaco para testes do projeto
 ├── project.clj        -> Configuracao do projeto Leiningen
 ├── exercises.md       -> Exercicios da trilha
@@ -29,6 +30,7 @@ lein run
 | ------------------ | ---------- | ----------------------------------------------------------------------- |
 | `src/codes/`       | Exemplos   | Namespaces introdutorios sobre sintaxe, funcoes e estruturas basicas    |
 | `src/collections/` | Exemplos   | Namespaces praticos sobre colecoes, group-by, lazy vs eager e ordenacao |
+| `src/refs/`         | Exemplos   | Namespaces sobre filas, threads, atomos, swap! e concorrencia          |
 | `exercises.md`     | Exercicios | Desafios para praticar os conceitos das notas                           |
 | `projects.md`      | Projetos   | Propostas de mini projetos para consolidar o aprendizado                |
 
@@ -58,3 +60,10 @@ Cada namespace foca em um conceito so. Va na ordem abaixo, testando no REPL a ca
 5. `lazy_eager.clj` - `filter` vs `keep`, avaliacao lazy, chunking
 6. `map.clj` - reimplementando `map` do zero com recursao e `recur`
 7. `reduce.clj` - reimplementando `reduce` do zero com `recur`/`loop`
+
+**`src/refs/` (filas, atomos e concorrencia):**
+
+1. `queue.clj` - `PersistentQueue`, `conj`, `peek`, `pop`, `update` em mapas
+2. `threads.clj` - limitar fila com `if`/`count`, `ex-info`/`try`/`catch`, criar e iniciar `Thread`
+3. `atomos_e_retries.clj` - race condition na pratica, `atom`, `swap!`, `deref` (`@`), shadowing
+4. `partial.clj` - `mapv`, `partial`, `doseq`, `dotimes`
