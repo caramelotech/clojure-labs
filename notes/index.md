@@ -7,7 +7,7 @@ Base de conhecimento sobre **Clojure** do Caramelo Tech, com foco em programaç�
 - **Introdução ao Clojure** - ambiente, sintaxe básica, atalhos, threading macros e boas práticas
 - **Coleções** - vetores, mapas, reduce, ordenação e avaliação lazy vs eager
 - **Refs, Átomos e Concorrência** - filas persistentes, threads, átomos e retries
-- **Testes** - introdução ao clojure.test
+- **Testes** - introdução ao clojure.test, arquitetura e escopo dos testes unitários
 
 Navegue pelas seções na barra lateral. O [índice das anotações](/labs/clojure/indice/) lista todo o conteúdo em uma página só.
 
