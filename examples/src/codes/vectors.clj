@@ -39,17 +39,11 @@
 (println "Novo estoque:" new-estoque)                       ; Novo estoque: [Mochila Caneta Cadeira]
 
 ; Por Clojure ser imutável, a função conj não altera o vetor original, ela retorna um novo vetor com o novo item adicionado
-; Para adicionar o novo vetor, é necessário atribuir o retorno da função conj a uma nova variável ou reatribuir para o símbolo existente
+; Para usar o novo vetor, é necessário atribuir o retorno de conj a uma nova variável ou reatribuir para o símbolo existente
 
-; Em Clojure, a redefinição de símbolos e a manipulação de dados imutáveis são otimizadas através do uso de estruturas de dados persistentes
-; Essas estruturas de dados são implementadas para compartilhar a maioria dos dados entre as versões antigas e novas,
-; minimizando a necessidade de cópias completas e, portanto, reduzindo o custo de processamento
-
-; Por exemplo, ao adicionar um item a um vetor usando a função conj, Clojure cria um novo vetor que compartilha a maioria dos elementos com o vetor original
-; Isso é possível porque as estruturas de dados imutáveis em Clojure são implementadas usando técnicas como árvores de hash e vetores de árvore,
-; que permitem a reutilização eficiente de partes dos dados
-; Essa abordagem garante que as operações em estruturas de dados imutáveis sejam eficientes em termos de tempo e espaço, evitando o custo elevado de cópias completas e
-; permitindo que Clojure seja altamente performático mesmo com a imutabilidade
+; Isso não significa que Clojure copia o vetor inteiro a cada conj: as estruturas de dados
+; imutáveis são "persistentes" e compartilham a maior parte da memória entre a versão antiga
+; e a nova, então a operação continua barata mesmo em coleções grandes.
 
 (def estoque (conj estoque "Cadeira"))
 

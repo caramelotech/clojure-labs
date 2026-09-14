@@ -4,11 +4,10 @@
   "Retorno do valor com o desconto de 10% se o valor bruto for estritamente maior que 100"
   [valor-bruto]
   (if (> valor-bruto 100)
-    (let [taxa-de-desconto (/ 10 100)
+    (let [taxa-de-desconto (/ 10 100)                        ; ramo "verdadeiro"
           desconto (* valor-bruto taxa-de-desconto)]
-      (- valor-bruto desconto))                             ; Para verdadeiro
-    valor-bruto)                                            ; Para falso
-  )                                                         ; Se não houvesse instrução para falso, o retorno seria nil
+      (- valor-bruto desconto))
+    valor-bruto))                                            ; ramo "falso" - sem ele, o retorno seria nil
 
 
 (defn aplica-desconto?
