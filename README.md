@@ -6,9 +6,6 @@
 
 Base de conhecimento sobre **Clojure** do Caramelo Tech, com foco em programação funcional para iniciantes.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
-
 As notas deste repositório são publicadas no site do [Caramelo Labs](https://caramelotech.com.br/labs/clojure/).
 
 ## O que você vai encontrar
@@ -75,22 +72,3 @@ Contribuições são bem-vindas. Veja o [Guia de Contribuição](.github/CONTRIB
 ## Licença
 
 MIT
-
-## Contribuidores
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="http://felurye.com.br"><img src="https://avatars.githubusercontent.com/u/37555137?v=4?s=100" width="100px;" alt="Daniele Araujo"/><br /><sub><b>Daniele Araujo</b></sub></a><br /><a href="#code-felurye" title="Code">💻</a> <a href="#content-felurye" title="Content">🖋</a> <a href="#example-felurye" title="Examples">💡</a> <a href="#ideas-felurye" title="Ideas, Planning, & Feedback">🤔</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/samantha-kellen/"><img src="https://avatars.githubusercontent.com/u/42253793?v=4?s=100" width="100px;" alt="Samantha Kellen"/><br /><sub><b>Samantha Kellen</b></sub></a><br /><a href="#code-SamGomes52" title="Code">💻</a> <a href="#content-SamGomes52" title="Content">🖋</a> <a href="#example-SamGomes52" title="Examples">💡</a> <a href="#ideas-SamGomes52" title="Ideas, Planning, & Feedback">🤔</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
