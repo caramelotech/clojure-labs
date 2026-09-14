@@ -1,13 +1,11 @@
 (ns collections.map)
 
-;; `meu-mapa` é uma função recursiva que aplica uma função dada a cada elemento de uma sequência.
+;; `meu-mapa` reimplementa a ideia por tras do `map`: aplica uma funcao a cada
+;; elemento de uma sequencia, um a um, chamando a si mesma recursivamente.
 ;;
-;; Parâmetros:
-;; - `fun`: Uma função a ser aplicada a cada elemento da sequência.
-;; - `seq`: Uma sequência de elementos à qual a função será aplicada.
-;;
-;; A função processa a sequência aplicando `fun` ao primeiro elemento e, em seguida, chamando-se
-;; recursivamente com o restante da sequência até que a sequência esteja vazia.
+;; Parametros:
+;; - `fun`: funcao a ser aplicada a cada elemento
+;; - `seq`: sequencia de elementos
 (defn meu-mapa
   [fun seq]
   (let [primeiro-elemento (first seq)]
@@ -16,25 +14,18 @@
         (fun primeiro-elemento)
         (meu-mapa fun (rest seq))))))
 
-(println "----------------")
-(println "Chamadas de `meu-mapa` com diferentes sequências:")
 (meu-mapa println [1 2 3 4 5])
-(println "----------------")
+;; => imprime 1, 2, 3, 4 e 5, cada um em uma linha
+
 (meu-mapa println ["Daniele" "João" false "Maria"])
-(println "----------------")
+;; => imprime cada item da lista, um por linha
+
 (meu-mapa println [])
-(println "----------------")
+;; => nao imprime nada, a sequencia esta vazia
 
-
-;; `meu-mapa-otimizado` é uma função recursiva otimizada que aplica uma função dada a cada elemento de uma sequência.
-;;
-;; Parâmetros:
-;; - `fun`: Uma função a ser aplicada a cada elemento da sequência.
-;; - `seq`: Uma sequência de elementos à qual a função será aplicada.
-;;
-;; Esta função utiliza `recur` para realizar a recursão de forma mais eficiente, evitando o estouro de pilha (stack overflow)
-;; que pode ocorrer com a recursão tradicional usada em `meu-mapa`. O `recur` é uma boa prática em Clojure para recursão
-;; porque ele reutiliza a mesma chamada de função, otimizando o uso de memória e melhorando o desempenho.
+;; `meu-mapa-otimizado` faz a mesma coisa, mas usando `recur` em vez de chamar
+;; a funcao recursivamente. Isso evita estouro de pilha (stack overflow) em
+;; sequencias grandes, porque o Clojure reaproveita o mesmo frame de chamada.
 (defn meu-mapa-otimizado
   [fun seq]
   (let [primeiro-elemento (first seq)]
@@ -43,26 +34,11 @@
         (fun primeiro-elemento)
         (recur fun (rest seq))))))
 
-;(println "\n----------------")
-;(println "Chamada de `meu-mapa-otimizado` com um range de 10000 elementos:")
-;(meu-mapa-otimizado println (range 10000))
-;(println "----------------")
+(meu-mapa-otimizado println (range 5))
+;; => imprime 0, 1, 2, 3 e 4
 
-(defn valor-descontado
-  "Retorno do valor com o desconto de 10%"
-  [valor-bruto]
-  (let [taxa-de-desconto (/ 10 100)
-        desconto (* valor-bruto taxa-de-desconto)]          ; O let define um símbolo local que só é válido dentro do escopo do let
-    (- valor-bruto desconto)))
-
-(def precos [500, 20, 100, 44, 89])
-
-;(map valor-descontado precos)
-
-
-
-
-
-
-
-
+;; Repare que meu-mapa e meu-mapa-otimizado nao devolvem uma nova sequencia
+;; como o `map` de verdade - elas so aplicam `fun` a cada item (efeito colateral).
+;; Compare com o map nativo, que devolve os resultados em vez de so imprimi-los:
+(println (map inc [1 2 3 4 5]))
+;; => (2 3 4 5 6)

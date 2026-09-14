@@ -11,8 +11,8 @@
         desconto (* valor-bruto taxa-de-desconto)]          ; O let define um símbolo local que só é válido dentro do escopo do let
     (- valor-bruto desconto)))                              ; O retorno é o resultado da última interação dentro do let
 
-(println (class 90N))
-(println (class 90M))
+(println (class 90N))                                       ; => clojure.lang.BigInt
+(println (class 90M))                                       ; => java.math.BigDecimal
 
 (defn converte-anos-de-cachorro
   "Converte anos de cachorro em idade humana"
@@ -20,5 +20,5 @@
   (let [numero-multiplicador 5]
     (* idade-do-cachorro numero-multiplicador)))
 
-(converte-anos-de-cachorro 6)
+(println (converte-anos-de-cachorro 6))                     ; => 30
 
