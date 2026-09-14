@@ -9,7 +9,7 @@ Este é o repositório de **conteúdo** do Clojure Labs (Caramelo Tech):
 - **Conteúdo:** 100% em `notes/`, Markdown puro em português brasileiro, sem frontmatter
 - **Publicação:** o repositório hub [labs](https://github.com/caramelotech/labs) busca as notas daqui e publica em `https://caramelotech.com.br/labs/clojure/`
 - **Sem build de site:** não há dependências Node - apenas Markdown e o projeto Leiningen em `examples/`
-- **Principais seções:** 1-introducao, 2-colecoes, 3-refs, x-tests
+- **Principais seções:** introducao, colecoes, refs, tests
 
 Veja [CLAUDE.md](CLAUDE.md) para detalhes completos.
 
@@ -17,13 +17,13 @@ Veja [CLAUDE.md](CLAUDE.md) para detalhes completos.
 
 ### Adicionar uma nova nota
 
-1. **Escolha a pasta:** `1-introducao/`, `2-colecoes/`, `3-refs/` ou `x-tests/`
+1. **Escolha a pasta:** `introducao/`, `colecoes/`, `refs/` ou `tests/`
 2. **Nomeie com prefixo numérico** para controlar a ordem na barra lateral: se a pasta já tem `5-*.md`, crie `6-nome-do-topico.md`
 3. **Primeira linha = título:** comece o arquivo com `# Título da Nota` - o site usa esse H1 como título da página
 4. **Sem frontmatter:** escreva direto o Markdown
 5. **Atualize `notes/indice.md`** com a nova nota
 
-Exemplo de nota nova (`notes/2-colecoes/7-transducers.md`):
+Exemplo de nota nova (`notes/colecoes/7-transducers.md`):
 
 ```markdown
 # Transducers

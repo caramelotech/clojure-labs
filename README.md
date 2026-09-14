@@ -44,8 +44,8 @@ Este repositório contém **apenas conteúdo** - não há build, dependências o
 As notas em `notes/` são Markdown puro, sem frontmatter:
 
 - A primeira linha da nota deve ser o título: `# Título da Nota`
-- Use prefixo numérico no nome do arquivo para controlar a ordem na barra lateral: `1-introducao.md`, `2-exemplos.md`
-- Agrupe por tema em subpastas (`1-introducao/`, `2-colecoes/`, ...)
+- Use prefixo numérico no nome do arquivo para controlar a ordem na barra lateral: `introducao.md`, `2-exemplos.md`
+- Agrupe por tema em subpastas (`introducao/`, `colecoes/`, ...)
 - Imagens ficam junto das notas (ex: `notes/secao/assets/img.png`) e são referenciadas com caminho relativo: `![descrição](./assets/img.png)`
 - Links para outras notas do site usam o caminho completo: `/labs/clojure/<secao>/<nota>/`
 

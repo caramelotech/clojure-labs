@@ -156,5 +156,5 @@ Diferenças práticas em relação a vetores:
 
 A principal razão para preferir vetores na maioria dos casos é o acesso O(1) e a compatibilidade com `get`/`nth`. Listas são úteis quando você quer garantia de laziness total.
 
-[Voltar para a secao](/labs/clojure/2-colecoes/)
+[Voltar para a secao](/labs/clojure/colecoes/)
 

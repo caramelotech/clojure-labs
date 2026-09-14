@@ -139,5 +139,5 @@ Para verificar existência de forma mais idiomática:
 ;; => true
 ```
 
-[Voltar para a secao](/labs/clojure/2-colecoes/)
+[Voltar para a secao](/labs/clojure/colecoes/)
 

@@ -50,3 +50,6 @@ target/
 
 # Shell crash dumps
 bash.exe.stackdump
+
+# Personal
+ref/

@@ -1,5 +1,3 @@
-# Refs, Atomos e Concorrencia
-
 # 🔄 Refs, Átomos e Concorrência
 
 - [PersistentQueue e Mapas](./1-queue.md)
@@ -8,4 +6,3 @@
 - [mapv, partial, doseq e dotimes](./4-partial.md)
 
 [Voltar ao indice](/labs/clojure/indice/)
-

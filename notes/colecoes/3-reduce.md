@@ -59,5 +59,5 @@ Você pode usar a função `recur` dentro de um `loop` para criar recursões efi
 ;; => 15
 ```
 
-[Voltar para a secao](/labs/clojure/2-colecoes/)
+[Voltar para a secao](/labs/clojure/colecoes/)
 

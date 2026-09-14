@@ -1,5 +1,3 @@
-# Colecoes em Clojure
-
 # Coleções em Clojure
 
 ## Introdução
@@ -156,4 +154,3 @@ Clojure oferece funções de ordem superior para manipular coleções:
 (reduce + numeros)
 ;; => 15
 ```
-

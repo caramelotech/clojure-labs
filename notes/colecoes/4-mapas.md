@@ -124,5 +124,5 @@ Usando `group-by` + funções auxiliares para calcular o total de cada pedido:
 ;;     ...)
 ```
 
-[Voltar para a secao](/labs/clojure/2-colecoes/)
+[Voltar para a secao](/labs/clojure/colecoes/)
 

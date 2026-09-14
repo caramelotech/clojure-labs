@@ -1,5 +1,3 @@
-# Colecoes em Clojure
-
 # 📦 Coleções em Clojure
 
 - [Introdução](./1-introducao.md)
@@ -10,4 +8,3 @@
 - [Lazy vs Eager](./6-lazy-eager.md)
 
 [Voltar ao indice](/labs/clojure/indice/)
-
