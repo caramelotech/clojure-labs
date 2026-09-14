@@ -4,7 +4,6 @@
     { "label": "Introdução ao Clojure", "directory": "introducao" },
     { "label": "Coleções", "directory": "colecoes" },
     { "label": "Refs, Átomos e Concorrência", "directory": "refs" },
-    { "label": "Testes", "directory": "tests" },
-    { "label": "Índice", "slug": "indice" }
+    { "label": "Testes", "directory": "tests" }
   ]
 }
