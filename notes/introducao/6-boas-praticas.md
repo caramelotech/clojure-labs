@@ -75,4 +75,3 @@ No primeiro exemplo, uma função lambda é utilizada para calcular o quadrado d
 Funções lambda são uma ferramenta poderosa em Clojure, permitindo que você escreva código conciso e expressivo.
 No entanto, é importante usá-las com cuidado para manter a clareza e a manutenibilidade do código.
 Seguindo as boas práticas mencionadas, você pode aproveitar ao máximo as funções lambda sem comprometer a qualidade do seu código.
-

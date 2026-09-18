@@ -50,7 +50,7 @@ test/
 - `logic/` guarda as funções puras com as regras de negócio, o coração do hexágono
 - `controllers/` chama `logic/` e decide o que fazer com o resultado
 - `adapters/` e `db/` conversam com banco de dados e outros mecanismos de persistência
-- `diplomat/` é o apelido que o Nubank dá à camada de adapters nesse estilo de arquitetura (a "Diplomat Architecture"), que converte entre o schema externo e o schema interno - veja a nota [Diplomat Architecture: o Ports & Adapters do Nubank](/labs/clojure/tests/3-arquitetura-diplomat/) para os detalhes
+- `diplomat/` é o apelido que o Nubank dá à camada de adapters nesse estilo de arquitetura (a "Diplomat Architecture"), que converte entre o schema externo e o schema interno - veja a nota [Diplomat Architecture: o Ports & Adapters do Nubank](/labs/clojure/tests/4-arquitetura-diplomat/) para os detalhes
 - `model/` e `schemata/` guardam as estruturas de dados e validações de schema usadas pelo serviço
 - `test/unit/` espelha essa mesma estrutura para os testes unitários, enquanto `test/integration/` guarda os testes que sobem dependências reais (ou próximas do real) para validar a integração ponta a ponta
 

@@ -66,4 +66,3 @@ Note que, no caso acima, o resultado é o mesmo, mas a posição dos argumentos 
 ## Referências e Material Complementar
 
 - [Threading Macros Guide - Clojure.org](https://clojure.org/guides/threading_macros)
-

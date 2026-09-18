@@ -17,4 +17,3 @@ Esses são alguns atalhos úteis para trabalhar com Clojure e REPL no IntelliJ I
 | Comentar/Descomentar linha        | `Ctrl + /`               | `Cmd + /`                  |
 | Duplicar linha                    | `Ctrl + D`               | `Cmd + D`                  |
 | Deletar linha                     | `Ctrl + Y`               | `Cmd + Delete`             |
-

@@ -4,7 +4,7 @@ Base de conhecimento sobre **Clojure** do Caramelo Tech, com foco em programaç�
 
 ## O que você vai encontrar
 
-- **Introdução ao Clojure** - ambiente, sintaxe básica, atalhos, threading macros e boas práticas
+- **Introdução ao Clojure** - ambiente, sintaxe básica, modelo mental funcional (vs OO), atalhos, threading macros e boas práticas
 - **Coleções** - vetores, mapas, reduce, ordenação e avaliação lazy vs eager
 - **Refs, Átomos e Concorrência** - filas persistentes, threads, átomos e retries
 - **Testes** - introdução ao clojure.test, arquitetura e escopo dos testes unitários

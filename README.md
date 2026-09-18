@@ -17,12 +17,12 @@ As notas deste repositório são publicadas no site do [Caramelo Labs](https://c
 
 ## Conteúdo
 
-| Tópico                      | Descrição                                             |
-| --------------------------- | ----------------------------------------------------- |
-| Introdução ao Clojure       | Ambiente, sintaxe, atalhos, threading e boas práticas |
-| Coleções                    | Vetores, mapas, reduce, ordenação, lazy vs eager      |
-| Refs, Átomos e Concorrência | Filas persistentes, threads, átomos e retries         |
-| Testes                      | Introdução ao clojure.test                            |
+| Tópico                      | Descrição                                                                              |
+| --------------------------- | -------------------------------------------------------------------------------------- |
+| Introdução ao Clojure       | Ambiente, sintaxe, modelo mental funcional (vs OO), atalhos, threading e boas práticas |
+| Coleções                    | Vetores, mapas, reduce, ordenação, lazy vs eager                                       |
+| Refs, Átomos e Concorrência | Filas persistentes, threads, átomos e retries                                          |
+| Testes                      | clojure.test, arquitetura hexagonal e Diplomat Architecture                            |
 
 ## Estrutura do repositório
 
